@@ -1,5 +1,6 @@
-import 'package:e_commerce_app/bloc/product_bloc/product_bloc.dart';
-import 'package:e_commerce_app/presentation/home_screen/home_screen.dart';
+import 'package:e_commerce_app/presentation/bloc/cart_bloc/cart_bloc.dart';
+import 'package:e_commerce_app/presentation/bloc/product_bloc/product_bloc.dart';
+import 'package:e_commerce_app/presentation/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => ProductBloc(),
         ),
-        // BlocProvider(
-        //   create: (context) => SubjectBloc(),
-        // ),
+        BlocProvider(
+          create: (context) => CartBloc(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

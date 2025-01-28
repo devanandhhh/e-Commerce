@@ -1,8 +1,8 @@
 import 'package:e_commerce_app/core/colors.dart';
 import 'package:e_commerce_app/data/model/model.dart';
-import 'package:e_commerce_app/presentation/product_screen/widget/bottom_bar.dart';
-import 'package:e_commerce_app/presentation/product_screen/widget/product_cover.dart';
-import 'package:e_commerce_app/presentation/product_screen/widget/product_info.dart';
+import 'package:e_commerce_app/presentation/screens/product_screen/widget/bottom_bar.dart';
+import 'package:e_commerce_app/presentation/screens/product_screen/widget/product_cover.dart';
+import 'package:e_commerce_app/presentation/screens/product_screen/widget/product_info.dart';
 import 'package:flutter/material.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -17,12 +17,9 @@ class ProductScreen extends StatelessWidget {
         title: Text("Details "),
       ),
       body: SingleChildScrollView(
-        
         child: Column(
           children: [
-
             ProductCover(
-              
               productModel: model,
             ),
             Divider(),
@@ -30,7 +27,7 @@ class ProductScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar:BottomPriceAndRating(productModel: model),
+      bottomNavigationBar: BottomPriceAndRating(productModel: model),
     );
   }
 }

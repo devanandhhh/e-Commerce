@@ -1,6 +1,5 @@
 import 'package:e_commerce_app/data/model/model.dart';
-import 'package:e_commerce_app/presentation/product_screen/widget/add_cart_button.dart';
-import 'package:e_commerce_app/presentation/widgets/custom_snakbar.dart';
+import 'package:e_commerce_app/presentation/screens/product_screen/widget/add_cart_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,7 +26,7 @@ class BottomPriceAndRating extends StatelessWidget {
               style:
                   GoogleFonts.inter(fontSize: 21, fontWeight: FontWeight.bold),
             ),
-            AddCartButton()
+            AddCartButton(model: productModel,)
           ],
         ),
       ),
